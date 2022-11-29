@@ -1,3 +1,7 @@
+// HERE SOME DOM MENUPOLATION FOR PRACTISE
+
+let secondtdiv = document.querySelector(".secondtdiv");
+
 // VARIABLES
 
 // I cannot const variable more then one time
@@ -154,8 +158,8 @@ Age: ${resultOfReturnObject.age}`);
 //BOOLEANS
 let myName = "Arvid dawn amin";
 
-console.log(myName == "sdfjkk"); // return true
-console.log(myName == "Arvid dawn amin"); // return false
+console.log(myName === "sdfjkk"); // return true
+console.log(myName === "Arvid dawn amin"); // return false
 
 //TYPE CONVERTION
 const convertStringtonumber = "500";
@@ -171,3 +175,83 @@ console.log((newNumber += 300));
 let numberConvertToString = 39797;
 let newnumberConvertToString = String(numberConvertToString);
 console.log((newnumberConvertToString += 700));
+
+//LOOPS
+
+// For Loops
+let myFavouriteFoods = [
+  "Mango",
+  "Lichi",
+  "Jackfruite",
+  "Banana",
+  "Mandarin",
+  "Orange",
+  "Passion",
+];
+
+for (let i = 0; i < myFavouriteFoods.length; i++) {
+  let arrayResult = myFavouriteFoods[i];
+  secondtdiv.innerHTML += ` ${arrayResult} <br>`;
+}
+
+// While loop
+i = 0;
+while (i < myFavouriteFoods.length) {
+  console.log(`This is the result of while loop: ${myFavouriteFoods[i]}`);
+  i++;
+}
+
+//Foreach loop
+myFavouriteFoods.forEach((elem) => {
+  console.log(`This is the result of foreach loop ${elem}`);
+});
+
+// IF CONDITION
+
+const checkIfCondition = "My e-mail address is bahalul_tuk yahoo.com";
+
+//And condition
+if (checkIfCondition.length > 20 && checkIfCondition.includes("@")) {
+  console.log(
+    `Your AND condition is true and here your result: ${checkIfCondition}`
+  );
+}
+// Or condition
+else if (checkIfCondition.length > 20 || checkIfCondition.includes("@")) {
+  console.log(
+    `Your OR condition is true and here your result: ${checkIfCondition}`
+  );
+} else {
+  console.log("You have nothing avobe of them");
+}
+
+// If condition always run with true conditions.Not with false condition.So we need to convert in true.
+let myNewName = true;
+if (!myNewName) {
+  console.log(
+    " If condition always run with true conditions.Not with false condition.So we need to convert in true."
+  );
+} else {
+  console.log("You are checking if else conditions by boolean");
+}
+
+// Break condition by IF Ealse
+
+let breakNumbers = [10, 20, 4, 45, 65, 132, 867, 323, 4, 352];
+
+for (let i = 0; i < breakNumbers.length; i++) {
+  let resultOfBreakNumber = breakNumbers[i];
+  if (resultOfBreakNumber === 20) {
+    console.log(
+      "You have been missd the number of '20' by by usining continue methood in if condition "
+    );
+    continue;
+  }
+
+  console.log(resultOfBreakNumber);
+
+  if (resultOfBreakNumber === 65) {
+    console.log("you are in break poients.The cod will not continue");
+    break;
+  }
+}
