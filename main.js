@@ -285,5 +285,8 @@ function switchCaseFunction() {
 
 //HOW TO DELETE AN ELEMENT
 //HOW TO DELETE AN ELEMENT
+<<<<<<< HEAD
 //HOW TO DELETE AN ELEMENT
 //HOW TO DELETE AN ELEMENT
+=======
+>>>>>>> 53a85c51be4cfb263a417b3eb1b950cbc956f354
