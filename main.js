@@ -255,3 +255,35 @@ for (let i = 0; i < breakNumbers.length; i++) {
     break;
   }
 }
+
+// SWITCH CASE
+
+const switchCase = 09;
+const switchCaseDom = document.querySelector(".switch-case");
+const switchCaseBtn = document.querySelector(".switch-case-but");
+switchCaseBtn.addEventListener("click", switchCaseFunction);
+
+function switchCaseFunction() {
+  const creatNewElement = document.createElement("h2");
+
+  switchCaseDom.appendChild(creatNewElement);
+  switch (switchCase) {
+    case 09: {
+      creatNewElement.innerHTML = `Dawn Amin Ahmed`;
+      break;
+    }
+    case 12: {
+      creatNewElement.innerHTML = "Dewan Bahalul";
+      break;
+    }
+    case 13: {
+      creatNewElement.innerHTML = "Alvin Dawn";
+      break;
+    }
+  }
+}
+
+//HOW TO DELETE AN ELEMENT
+//HOW TO DELETE AN ELEMENT
+//HOW TO DELETE AN ELEMENT
+//HOW TO DELETE AN ELEMENT
