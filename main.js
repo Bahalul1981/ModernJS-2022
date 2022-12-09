@@ -256,37 +256,102 @@ for (let i = 0; i < breakNumbers.length; i++) {
   }
 }
 
-// SWITCH CASE
+//  SWITCH CASE
 
-const switchCase = 09;
+const switchCase = 0;
 const switchCaseDom = document.querySelector(".switch-case");
 const switchCaseBtn = document.querySelector(".switch-case-but");
 switchCaseBtn.addEventListener("click", switchCaseFunction);
 
 function switchCaseFunction() {
   const creatNewElement = document.createElement("h2");
-
   switchCaseDom.appendChild(creatNewElement);
+  // if (switchCase===09)
   switch (switchCase) {
     case 09: {
       creatNewElement.innerHTML = `Dawn Amin Ahmed`;
       break;
     }
+    // else if (switchCase===12)
     case 12: {
       creatNewElement.innerHTML = "Dewan Bahalul";
       break;
     }
+    // else if (switchCase===13)
     case 13: {
       creatNewElement.innerHTML = "Alvin Dawn";
       break;
     }
+    // else
+    default: {
+      creatNewElement.innerHTML =
+        "You are not in the right point.Please change the value to get right point.";
+    }
   }
 }
 
-//HOW TO DELETE AN ELEMENT
-//HOW TO DELETE AN ELEMENT
-<<<<<<< HEAD
-//HOW TO DELETE AN ELEMENT
-//HOW TO DELETE AN ELEMENT
-=======
->>>>>>> 53a85c51be4cfb263a417b3eb1b950cbc956f354
+//    EXTRA EXERCISE
+//This is global variable.
+let myFavouriteHobbies = "Football";
+// DOM
+const learningScoopDoomElem = document.querySelector(".learning-scoop");
+function scoopVariable() {
+  // let creatList = document.createElement("li");
+  // creatList.innerHTML = myFavouriteHobbies;
+  // learningScoopDoomElem.appendChild(creatList);
+  // TUGGLE;
+  learningScoopDoomElem.innerHTML = myFavouriteHobbies;
+  if (myFavouriteHobbies === "Football") {
+    myFavouriteHobbies = "Basketball";
+  } else {
+    myFavouriteHobbies = "Football";
+  }
+}
+const scoopHandel = document.querySelector(".scoop-btn");
+scoopHandel.addEventListener("click", scoopVariable);
+
+//SCOOP
+//This is global.It will work anywhere
+let richCountry = "USA";
+const scoopFunction = () => {
+  //This is scoop variable.It will work inside scoop.
+  let richCountry = "Qater";
+  console.log(richCountry);
+};
+console.log(richCountry);
+scoopFunction();
+
+//  FUNCTION
+
+//Function Declaretion: I can call this function even before.
+
+const functionDisplay = document.querySelector(".function-declaretions");
+const functionDeclaretionElement = document.querySelector(
+  ".function-declaretion"
+);
+document
+  .querySelector(".function-expration")
+  .addEventListener("click", function () {
+    declarationFunction();
+    function declarationFunction() {
+      functionDeclaretionElement.innerHTML =
+        "Function declaretion: I can call this function even before initialization.";
+    }
+  });
+
+//Function Expretion:I cannot call this function before.I have to call this function after.
+
+document
+  .querySelector(".function-declaration")
+  .addEventListener("click", function () {
+    const exprationFunction = function (text) {
+      console.log(text);
+      let creatPelement = document.createElement("p");
+      creatPelement.classList.add("created-p-element-for-expration-function");
+      creatPelement.innerHTML = text;
+      functionDisplay.appendChild(creatPelement);
+    };
+    exprationFunction(
+      "Function Expretion:I cannot call this function before.I have to call this function after."
+    );
+  });
