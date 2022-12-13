@@ -11,17 +11,38 @@
   height: 300px;
   width: 500px;
   margin: auto;
-  width: 50%;
+  width: 80%;
   padding-top: 50px;
-  background-color: bisque;
+  background-color: rgba(61, 42, 18, 0.297);
 }
 .secondtdiv {
   margin-top: 100px !important;
   height: 300px;
   width: 500px;
   margin: auto;
-  width: 50%;
+  width: 80%;
   padding-top: 50px;
-  background-color: bisque;
+  background-color: rgba(61, 42, 18, 0.297);
+}
+.dom-menipulation {
+  min-height: 500px;
+  margin: auto;
+  width: 80%;
+  height: auto;
+  background-color: rgba(61, 42, 18, 0.297);
+}
+.dom-manipulation-element {
+  padding: 50px;
+  color: brown;
+}
+
+.success-massage {
+  color: green;
+}
+.gray-color {
+  color: blue;
+}
+.red-color {
+  color: red;
 }
 /* CSS STYLE FOR FUNCTION */

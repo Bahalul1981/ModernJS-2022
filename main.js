@@ -320,38 +320,3 @@ const scoopFunction = () => {
 };
 console.log(richCountry);
 scoopFunction();
-
-//  FUNCTION
-
-//Function Declaretion: I can call this function even before.
-
-const functionDisplay = document.querySelector(".function-declaretions");
-const functionDeclaretionElement = document.querySelector(
-  ".function-declaretion"
-);
-document
-  .querySelector(".function-expration")
-  .addEventListener("click", function () {
-    declarationFunction();
-    function declarationFunction() {
-      functionDeclaretionElement.innerHTML =
-        "Function declaretion: I can call this function even before initialization.";
-    }
-  });
-
-//Function Expretion:I cannot call this function before.I have to call this function after.
-
-document
-  .querySelector(".function-declaration")
-  .addEventListener("click", function () {
-    const exprationFunction = function (text) {
-      console.log(text);
-      let creatPelement = document.createElement("p");
-      creatPelement.classList.add("created-p-element-for-expration-function");
-      creatPelement.innerHTML = text;
-      functionDisplay.appendChild(creatPelement);
-    };
-    exprationFunction(
-      "Function Expretion:I cannot call this function before.I have to call this function after."
-    );
-  });
